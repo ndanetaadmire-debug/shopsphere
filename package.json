@@ -1,0 +1,38 @@
+{
+  "name": "shopsphere",
+  "version": "1.0.0",
+  "description": "Commerce backend: VAT-correct pricing engine, inventory reservations that cannot oversell, idempotent payments and an order saga with a transactional outbox.",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "ci": "npm run typecheck && npm test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndanetaadmire-debug/shopsphere.git"
+  },
+  "author": "Admire T. Ndaneta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ndanetaadmire-debug/shopsphere/issues"
+  },
+  "homepage": "https://github.com/ndanetaadmire-debug/shopsphere#readme",
+  "dependencies": {
+    "fastify": "^5.12.8",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@vitest/coverage-v8": "^5.1.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  }
+}
